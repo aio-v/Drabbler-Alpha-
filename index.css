@@ -1,0 +1,284 @@
+/* ===================================== */
+/* ==============COLORS================= */
+/* ===================================== */
+h1, h3,  #working_title, #summary_wrapper {
+    color: #b5b7be;
+}
+body {
+    color: #92929e;
+}
+.format_btn, .del_btn, .menu_item {
+    color: #bfbfcf;
+}
+.draggable {
+    color: #4d535e;
+}
+.format_btn:focus i, .del_btn:focus i, .menu_item:focus, .format_btn:hover i, .del_btn:hover i, .menu_item:hover, .prompt {
+    color: #e1e3ec;
+}
+#wc_input, .placeholder, ::placeholder {
+    color: #4990d3;
+}
+.drabble_wrapper, .drabble_wc_wrapper {
+    background-color: #26292E;
+}
+body, #goal_header, #summary_wrapper {
+    background-color: #131417;
+}
+#toolbar, [data-goalHit="true"], [data-goalHit="true"] .drabble_wc_wrapper {
+    background-color:  #16181b;
+}
+.menu {
+    background-color: #16181b;
+}
+#font_family, #font_size {
+    background-color: #e1e3ec;
+}
+#wc_input, #working_title, .prompt, .format_btn, .del_btn {
+    background-color: transparent;
+}
+
+/* ===================================== */
+/* ===============FONTS================= */
+/* ===================================== */
+#drabble_count, #wc_input {
+    font-size: 40px;
+}
+#working_title, #title_hide {
+    font-size: 25px;
+}
+.format_btn, #font_family, #font_size, .draggable {
+    font-size: 16px;
+}
+.drabble_wc_wrapper, .menu_item {
+    font-size: 14px;
+}
+body {
+    font-family: Century Gothic;
+}
+.drabble_wc_wrapper {
+    font-family: 'Courier New', Courier, monospace;
+}
+#wc_input, #working_title, .prompt, .menu_item {
+    font-family: inherit;
+}
+#wc_input, .drabble_wc_wrapper, .prompt {
+    font-weight: bold;
+}
+.placeholder, ::placeholder, #autosave {
+    font-style: italic;
+}
+.drabble_wc_wrapper, .prompt {
+    letter-spacing: .1rem;
+}
+.hide {
+    font-family: inherit;
+    display: none;
+    white-space: pre;
+  }
+
+/* ===================================== */
+/* ==============STICKY================= */
+/* ===================================== */
+#goal_header {
+    position: sticky;
+    height: 60px;
+    top: 0;
+    z-index: 1;
+}
+#toolbar {
+    position: sticky;
+    top: 60px;
+    z-index: 2;
+}
+.drabble_wc_wrapper {
+    position: sticky;
+    bottom: 0;
+}
+body.os-host > .os-padding > .os-viewport > .os-content {
+    height: auto !important;
+  }
+
+/* ===================================== */
+/* ================BORDER=============== */
+/* ===================================== */
+#wc_input, #working_title, #editor_wrapper, select, input, .format_btn, .del_btn, .prompt, .menu_item {
+    border: none;
+}
+.format_btn:focus, .del_btn:focus, select, input {
+    outline: none;
+}
+[contenteditable]:focus {
+    outline: none;
+}
+.toolbar_section {
+    border-right: 2px solid #3c4149;
+}
+li:not(:last-child) {
+    border-bottom: 2px solid #3c4149;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* ===================================== */
+/* ===============HEADER================ */
+/* ===================================== */
+#header_img {
+    display: block;
+    filter: invert(34%) sepia(85%) saturate(365%) hue-rotate(167deg) brightness(99%) contrast(92%);
+    padding: 10px 0px 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 20%;
+}
+#goal_header {
+    width: 100%;
+}
+h1, h3 {
+    text-align: center;
+}
+#summary_wrapper {
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    transition: .5s;
+}
+#toolbar {
+    flex: 0 0 75%;
+    box-sizing: border-box;
+    padding: 0px 5px 0px 5px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px #000000;
+}
+#format_toolbar, #util_toolbar {
+    display: inline-block;
+}
+#util_toolbar {
+    float: right;
+    padding: 0px 7px 0px 7px;
+}
+.toolbar_section {
+    padding: 0px 7px 0px 7px;
+}
+#font_family {
+    margin: 7px 0px 7px 7px;
+}
+#font_size {
+    margin: 7px 7px 7px 0px;
+}
+.format_btn, .del_btn, .menu_item {
+    cursor: pointer;
+    padding: 12px 7px 12px 7px;
+}
+#font_size {
+    width: 45px;
+}
+#autosave {
+    padding: 0px 10px 0px 10px;
+}
+ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+#save_options {
+    transition: .5s;
+}
+.rotated {
+    transform: rotate(90deg);
+    transition: .5s;
+}
+.menu {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 5px 14px 5px 14px;
+    right: 0;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px #000000;
+}
+.menu_item {
+    white-space: nowrap;
+    background: none;
+    padding: 7px 7px 7px 7px;
+}
+/* make scroll wheel invisible */
+input[type='number'] {                              
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ===================================== */
+/* ================BODY================= */
+/* ===================================== */
+#editor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+#editor_wrapper {
+    flex: 0 1 75%;
+    max-width: 75%;
+}
+
+/* ===================================== */
+/* ==============DRABBLE================ */
+/* ===================================== */
+.draggable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    box-sizing: border-box;
+}
+.draggable:hover {
+    cursor: grab;
+}
+.drabble_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px 0px 10px 0px;
+}
+.d_wc_bundle {
+    flex: 1 1 auto;
+    padding: 10px 10px 0px 0px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+.drabble {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    transition: .5s;
+}
+[contenteditable]:focus { 
+    padding-bottom: 40px;
+}
+.drabble p:first-child {
+    margin-top: 0;
+}
+.drabble p:last-child {
+    margin-bottom: 0;
+}
+.placeholder {
+    pointer-events: none;
+}
+.drabble_wc_wrapper {
+    padding-top: 20px;
+    height: 16px;
+    width: 100%;
+}
+.drabble_wc {
+    position: absolute;
+    bottom: 5;
+    right: 0;
+}
+.prompt, .wc {
+    margin-right: 10px;
+}
+

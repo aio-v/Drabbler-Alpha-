@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Drabbler [ALPHA]</title>
+        <!-- Icons Source -->
+        <script src="https://kit.fontawesome.com/a4e6dfdc9b.js" crossorigin="anonymous"></script>
+        <!-- HTML Sanitizer Plugin -->
+        <script src="https://cdn.jsdelivr.net/gh/jitbit/HtmlSanitizer@master/HtmlSanitizer.js"></script>
+        <!-- Dropbox Plugin -->
+        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="vueeae0437ujp9h"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <img src="Drabbler.svg" id="header_img">
+        <div id="goal_header">
+            <h1>
+                <span id="drabble_count">0</span> drabbles at
+                <input type="number" id="wc_input" min="1" max="5000" value="100"> words per drabble
+            </h1>
+        </div>
+        <h3><input id="working_title" placeholder="Title..." title="Title"><span class="hide", id="title_hide"></span> </h3>
+        <div id="summary_wrapper" contenteditable="true" title="Summary"></div>
+        <div id="editor">
+            <div id="toolbar">
+                <div id="format_toolbar">
+                    <span class="toolbar_section">
+                        <button class="format_btn" id="new_drabble" title="New Drabble (Ctrl+D)"><i class="fas fa-plus-circle"></i>
+                        </button><button class="format_btn" id="prompts_on" title="Toggle Prompts"><i class="fas fa-feather-alt"></i>
+                        </button>
+                    </span>
+                    <span class="toolbar_section">
+                        <select id="font_family" title="Font Family">
+                            <option class="font" value="Arial">Arial</option>
+                            <option class="font" value="Comic Sans MS">Comic Sans MS</option>
+                            <option class="font" value="Century Gothic" selected>Century Gothic</option>
+                            <option class="font" value="Consolas">Consolas</option>
+                            <option class="font" value="Georgia">Georgia</option>
+                            <option class="font" value="Impact">Impact</option>
+                            <option class="font" value="Times New Roman">Times New Roman</option>
+                            <option class="font" value="Verdana">Verdana</option>
+                        </select>
+                        <input type="number" id="font_size" min="8" max="64" value="16" step="2" title="Font Size">
+                    </span>
+                    <span class="toolbar_section">
+                        <button class="format_btn" id="bold" title="Bold (Ctrl+B)"><i class="fas fa-bold"></i>
+                        </button><button class="format_btn" id="italics" title="Italics (Ctrl+I)"><i class="fas fa-italic"></i>
+                        </button><button class="format_btn" id="underline" title="Underline (Ctrl+U)"><i class="fas fa-underline"></i>
+                        </button><button class="format_btn" id="strike" title="Strikethrough (Ctrl+S)"><i class="fas fa-strikethrough"></i>
+                        </button><button class="format_btn" id="subscript" title="Subscript"><i class="fas fa-subscript"></i>
+                        </button><button class="format_btn" id="superscript" title="Superscript"><i class="fas fa-superscript"></i>
+                        </button>
+                    </span>
+                    <span class="toolbar_section">
+                        </button><button class="format_btn" id="align_left" title="Align Left"><i class="fas fa-align-left"></i>
+                        </button><button class="format_btn" id="align_center" title="Align Center"><i class="fas fa-align-center"></i>
+                        </button><button class="format_btn" id="align_right" title="Align Right"><i class="fas fa-align-right"></i>
+                        </button><button class="format_btn" id="align_justify" title="Justify"><i class="fas fa-align-justify"></i>
+                        </button>
+                    </span>
+                </div>
+                <div id="util_toolbar">
+                    <span id="autosave">
+                        <span id="autosave_msg"></span>
+                    </span>
+                    <button class="format_btn" id="save_options" title="Project Options"><i class="fas fa-ellipsis-h"></i></button>
+                    <div class="menu" id="save_menu">
+                        <ul>
+                            <li><button class="menu_item" id="new" title="Start a new project. Make sure to save beforehand!">New Project</button></li>
+                            <li><button class="menu_item" id="open" title="Load a pre-existing project (expects .dbb format).">Open a Project</button></li>
+                            <li><button class="menu_item" id="save" title="Save your current project on your computer to work on it again later.">Save Project</button></li>
+                            <li><button class="menu_item" id="export" title="Export your current project in a simple, copy-pastable .doc format.">Export</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="editor_wrapper"></div>
+        </div>
+    </body>
+    <!-- JQuery Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Overlay Scrollbars Plugins -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.css" integrity="sha512-Ho1L8FTfzcVPAlvfkL1BV/Lmy1JDUVAP82/LkhmKbRX5PnQ7CNDHAUp2GZe7ybBpovS+ssJDf+SlBOswrpFr8g==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/js/jquery.overlayScrollbars.js" integrity="sha512-v6YPVQdeRVcdt+KmeSBDWcsxqLP6rlTVC2mxuBHrGUv05Q/hES67JwEfYNDSqPHLZmfTYbbIYVZbXElzgI+RkQ==" crossorigin="anonymous"></script>
+    <!-- Googoose Plugin -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/aadel112/googoose@master/jquery.googoose.js"></script>
+    <script type="text/javascript" src="texteditor.js"></script>
+</html>
